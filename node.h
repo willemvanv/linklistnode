@@ -9,11 +9,12 @@ using namespace std;
 class node {
  public:
   //constructor and destructor
-  node(int Id, float Gpa, char* NameFirst, char* NameLast);
+  node(student* Student);
   ~node();
   //set and get next
   void setNext(node* newnext);
   node* getNext();
+  student* getstudent();
  private:
   //variables for next and the node's student
   student* nodeStudent;

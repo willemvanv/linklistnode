@@ -5,8 +5,8 @@
 
 using namespace std;
 
-node::node(int Id, float Gpa, char* NameFirst, char* NameLast) {
-  nodeStudent = new student(Id, Gpa, NameFirst, NameLast);
+node::node(student* Student) {
+  nodeStudent = Student;
   next = NULL;
 }
 node::~node() {
@@ -18,4 +18,7 @@ void node::setNext(node* newnext) {
 }
 node* node::getNext() {
   return next;
+}
+student* node::getstudent() {
+  nodeStudent->getStudent();
 }
